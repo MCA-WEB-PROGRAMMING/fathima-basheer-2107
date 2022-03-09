@@ -1,0 +1,87 @@
+<html> 
+	<head> 
+		<script> 
+			function validate()
+			{ 
+				var name = document.forms["RegForm"]["Name"]; 
+				var email = document.forms["RegForm"]["EMail"]; 
+				var phone = document.forms["RegForm"]["Telephone"]; 
+				var disease =document.forms["RegForm"]["dis"]; 
+				var address = document.forms["RegForm"]["Address"]; 
+
+				if (name.value == "") 
+				{ 
+					window.alert("Please enter your name."); 
+					name.focus(); 
+					return false; 
+				} 
+
+				if (address.value == "") 
+				{ 
+					window.alert("Please enter your address"); 
+					address.focus(); 
+					return false; 
+				} 
+
+				if (email.value == "") 
+				{ 
+					window.alert( 
+					"Please enter a valid e-mail address"); 
+					email.focus(); 
+					return false; 
+				} 
+
+				if (phone.value == "") 
+				{ 
+					window.alert( 
+					"Please enter your phonenumber"); 
+					phone.focus(); 
+					return false; 
+				} 
+
+				if (disease.value == "" )
+				 { 
+					window.alert("Please enter the  disease"); 
+					password.focus(); 
+					return false; 
+                 }
+
+				
+				return true; 
+			} 
+		</script> 
+
+		<style> 
+		body
+		{
+			text-align: center;
+		}
+		</style> 
+	</head> 
+
+	<body bgcolor="yellow"> 
+		<h1 style="text-align: center;">HOSPITAL REGISTRATION FORM</h1> 
+		<form name="RegForm" onsubmit="return validate()"> 
+        <table align="center"> <tr>
+			<td>Name:</td> <td><input type="text" name="Name" pattern="[A-Z a-z]{3,}" title="it should contain min 3 characters"/></td> 
+			</td></tr>
+            <tr>
+			<td>Address: </td> <td><input type="text"  name="Address" /> </td>
+            </tr>
+            <tr>
+			<td>E-mail id:</td><td> <input type="text"  name="EMail" pattern="[A-Z a-z]{3,}@[A-Z a-z]{3,}[.][A-Z a-z]{2,}" title="something@anything.com" /></td> 
+			</tr> 
+            <tr>
+			<td>Disease:</td> <td><input type="text" name="dis"  title="should contains uppercase and lowercase"/></td> 
+			</tr> 
+            <tr>
+			<td>phone:</td><td> <input type="text" name="Telephone" /></td> 
+			</tr> 
+			<tr>
+			<td>	<input type="submit" value="Submit" name="Submit" /> </td>
+			<td>	<input type="reset" value="Reset" name="Reset" /> </td>
+			</tr> 
+            </table>
+		</form> 
+	</body> 
+</html> 
